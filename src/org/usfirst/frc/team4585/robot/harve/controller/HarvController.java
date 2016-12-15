@@ -12,7 +12,7 @@ public class HarvController extends SampleRobot{
 	HarvAutonomous autonomous;
 	
 	public HarvController(){
-		drive = new HarvDrive();
+		drive = new HarvDrive(0,1,2,3);
 		input = new HarvInput();
 		autonomous = new HarvAutonomous();
 	}
