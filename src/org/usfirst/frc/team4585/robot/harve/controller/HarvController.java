@@ -1,7 +1,6 @@
 package org.usfirst.frc.team4585.robot.harve.controller;
 
 import edu.wpi.first.wpilibj.SampleRobot;
-
 import org.usfirst.frc.team4585.robot.harve.model.*;
 import org.usfirst.frc.team4585.robot.harve.view.*;
 

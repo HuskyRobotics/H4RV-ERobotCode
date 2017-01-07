@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+// fontsize=14
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>360</x>
+      <y>30</y>
+      <w>260</w>
+      <h>990</h>
+    </coordinates>
+    <panel_attributes>Controller
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>30</y>
+      <w>260</w>
+      <h>990</h>
+    </coordinates>
+    <panel_attributes>Model
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>470</x>
+      <y>0</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_H4RV-ERobotCode_
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>720</x>
+      <y>30</y>
+      <w>260</w>
+      <h>990</h>
+    </coordinates>
+    <panel_attributes>View
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>60</y>
+      <w>240</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>_HarvAutonomous_
+--
+[Empty]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>120</y>
+      <w>240</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>_HarvDrive_
+--
+Instance Variables
+--
+MecanumDrive mecanumDrive
+--
+Instance Methods
+--
+&lt;Constructor&gt;(int, int, int, int)
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>250</x>
+      <y>330</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>330</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>240</y>
+      <w>240</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>_HarvVision_
+--
+[Empty]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>300</y>
+      <w>240</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>_MecanumDrive_
+--
+Instance Variables
+--
+int FRONTLEFT, BACKLEFT, FRONTRIGHT, BACKRIGHT; Spark[ ]: wheelMotors; Spark: frontLeft, backLeft, frontRight, backRight
+--
+Instance Methods
+--
+&lt;Constructor&gt;(int, int, int, int)
+updateMotors(double, double, double)
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>60</y>
+      <w>240</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>_HarvController (extends SampleRobot)_
+--
+Instance Variables
+--
+HarvDrive drive, HarvInput input, HarvAutonomous autonomous
+--
+Instance Methods
+--
+&lt;Constructor&gt;()
+robotinit()[EMPTY]
+disabled()[EMPTY]
+autonomous()[EMPTY]
+operatorControl()[EMPTY]
+test()[EMPTY]
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>60</y>
+      <w>240</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_Axsis [ENUM]_
+--
+Possible Values
+--
+X, Y, Z, X2, Y2, Z2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>140</y>
+      <w>240</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>_FlightstickInput_
+--
+Instance Variables
+--
+double: coeffX, coeffX, coeffZ, deadzoneX, deadxoneY, deadzoneZ, curveX, curveY, curveZ; Joystick: joystick;
+--
+Instance Methods
+--
+&lt;Constructor&gt;(short)
+joyGetOutput(Axsis)
+buttonGetOutput(int)
+setCoefficiants(double, double, double)
+setDeadzones(double, double, double)
+setCurves(double, double, double)
+getCoeffX()
+setCoeffX(double)
+getCoeffY()
+setCoeffY(double)
+getCoeffZ()
+setCoeffZ(double)
+getDeadzoneX()
+setDeadzoneX(double)
+getDeadzoneY()
+setDeadzoneY(double)
+getDeadzoneZ()
+setDeadzoneZ(double)
+getCurveX()
+setCurveX(double)
+getCurveY()
+setCurveY(double)
+getCurveZ()
+setCurveZ(double)
+getJoystick()
+setJoystick(Joystick)
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>750</y>
+      <w>240</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>_GamepadInput_
+--
+[Empty]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>810</y>
+      <w>240</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>_HarvInput_
+--
+Instance Variables
+--
+FlightstickInput: flightstick; GamepadInput gamepad;
+--
+Instance Methods
+--
+&lt;Constructor&gt;(short)
+getMagX()
+getMagY()
+getMagRot()
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
