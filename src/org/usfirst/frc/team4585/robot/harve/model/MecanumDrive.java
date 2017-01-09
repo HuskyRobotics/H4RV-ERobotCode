@@ -20,4 +20,10 @@ public class MecanumDrive {
 		this.wheelMotors[FRONTRIGHT].set(magY - magX + magZ);
 		this.wheelMotors[BACKLEFT].set(magY + magX + magZ);
 	}
-}
+	
+	public double getRotation(int wheel){
+		double wheelRotation = 0;
+		
+		return wheelRotation;
+	}
+} 
