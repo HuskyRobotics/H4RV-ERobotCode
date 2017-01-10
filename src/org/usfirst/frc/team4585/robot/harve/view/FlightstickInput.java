@@ -35,7 +35,7 @@ public class FlightstickInput {
 		joystick = new Joystick(port);
 	}
 	
-	public double joyGetOutput(Axsis axsis){
+	public double getOutput(Axsis axsis){
 		double number = 0;
 		switch(axsis){
 		case X: 

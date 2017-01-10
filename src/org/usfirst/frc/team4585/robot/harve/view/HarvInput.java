@@ -11,11 +11,21 @@ public class HarvInput {
 		
 	}
 	
+	public boolean getButtonPressed(int button){
+		return flightstick.buttonGetOutput(button);
+	}
+	
+	public double getAngle(){ // get the angle of the input
+		double angle = 0;
+		angle = Math.toDegrees(Math.atan2(flightstick.getOutput(Axsis.Y), flightstick.getOutput(Axsis.X)));
+		return angle;
+	}
+	
 	public double getMagX() {
 		
 		//Create variables
-		double magX = flightstick.joyGetOutput(Axsis.X);
-		double magY = flightstick.joyGetOutput(Axsis.Y);
+		double magX = flightstick.getOutput(Axsis.X);
+		double magY = flightstick.getOutput(Axsis.Y);
 		double angle = 0;
 		
 		//Find the angle
@@ -31,8 +41,8 @@ public class HarvInput {
 	public double getMagY() {
 		
 		//Create variables
-		double magX = flightstick.joyGetOutput(Axsis.X);
-		double magY = flightstick.joyGetOutput(Axsis.Y);
+		double magX = flightstick.getOutput(Axsis.X);
+		double magY = flightstick.getOutput(Axsis.Y);
 		double angle = 0;
 		
 		//Find the angle
@@ -49,7 +59,7 @@ public class HarvInput {
 		
 		double magX = this.getMagX();
 		double magY = this.getMagY();
-		double magRot = flightstick.joyGetOutput(Axsis.Z);
+		double magRot = flightstick.getOutput(Axsis.Z);
 		
 		if(!(Math.abs(magRot) <= 1 - (Math.abs(magX) + Math.abs(magY)))) {
 			

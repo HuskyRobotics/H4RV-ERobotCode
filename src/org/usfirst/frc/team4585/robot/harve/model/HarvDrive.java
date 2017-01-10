@@ -6,4 +6,13 @@ public class HarvDrive {
 	public HarvDrive(int frontLeft, int backLeft, int frontRight, int backRight){
 		mecanumDrive = new MecanumDrive(frontLeft, backLeft, frontRight, backRight);
 	}
+	
+	public double getWheelRotation(int wheel){
+		double wheelRotation = mecanumDrive.getRotation(wheel);
+		return wheelRotation;
+	}
+	
+	public void updateSpeed(double magX, double magY, double magRot){
+		mecanumDrive.updateMotors(magX, magY, magRot);
+	}
 }

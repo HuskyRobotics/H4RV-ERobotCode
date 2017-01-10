@@ -2,6 +2,7 @@ package org.usfirst.frc.team4585.robot.harve.controller;
 
 import edu.wpi.first.wpilibj.SampleRobot;
 import org.usfirst.frc.team4585.robot.harve.model.*;
+import org.usfirst.frc.team4585.robot.harve.model.autonomaus.HarvAutonomous;
 import org.usfirst.frc.team4585.robot.harve.view.*;
 
 public class HarvController extends SampleRobot{
@@ -34,6 +35,7 @@ public class HarvController extends SampleRobot{
 	public void operatorControl(){
 		while(isOperatorControl()&& isEnabled() ){
 			//put human operation code here.
+			drive.updateSpeed(input.getMagX(), input.getMagY(), input.getMagRot());
 			
 		}
 		
