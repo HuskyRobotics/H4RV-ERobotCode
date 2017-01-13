@@ -35,7 +35,8 @@ public class HarvController extends SampleRobot{
 	public void operatorControl(){
 		while(isOperatorControl()&& isEnabled() ){
 			//put human operation code here.
-			drive.updateSpeed(input.getMagX(), input.getMagY(), input.getMagRot());
+			ConservationVonMomentumDriveMode(); // this is ment to mess wiht castleton
+			//drive.updateSpeed(input.getMagX(), input.getMagY(), input.getMagRot());
 			
 		}
 		
@@ -45,5 +46,14 @@ public class HarvController extends SampleRobot{
 		while(isTest() && isEnabled()){
 			
 		}
+	}
+	
+	void ConservationVonMomentumDriveMode(){
+		double xMotion = 0, yMotion = 0, zMotion = 0, acceleration;
+		acceleration = .025;
+		xMotion += input.getMagX() * acceleration;
+		yMotion += input.getMagY() * acceleration;
+		zMotion += input.getMagRot() * acceleration;
+		drive.updateSpeed(xMotion, yMotion, zMotion);
 	}
 }
